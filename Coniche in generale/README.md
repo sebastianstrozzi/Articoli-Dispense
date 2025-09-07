@@ -7,6 +7,8 @@
 > **File principali:**
 > * `Coniche.tex`: Sorgente LaTeX del documento.
 > * `Coniche.pdf`: Versione compilata per la lettura.
+> * `Cmd`: cartella col file di comando.
+> * `Pics`: cartella con le immagini usate nella creazione.
 
 ## Miglioramenti Futuri (To-Do List)
 
