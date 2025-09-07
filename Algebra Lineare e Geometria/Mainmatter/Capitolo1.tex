@@ -1,0 +1,475 @@
+\chapter{Introduzione}
+	\section{Insiemistica}
+		Sia $X$ un insieme. Il concetto di insieme è primitivo\footnote{Facciamo finta che lo sia, in realtà c'è un mondo dietro! \label{primitivo}} e non se ne dà una vera definizione, ma lo si può intendere come una \emph{collezione di oggetti}. Per intenderci, $X$ può essere esibito elencandone gli elementi tra parentesi graffe: $X=\{a,b,c,\ldots\}$, oppure tramite una caratteristica verificata da tutti e soli i suoi elementi $X=\{x\tc p(x)\}$ dove $p(x)$ è una proprietà verificata da $x$.
+		\begin{eg}
+			$X=\{$le vocali dell'alfabeto italiano$\}$ $=$ $\{x\tc x$ è una vocale dell'alfabeto italiano$\}\ =\ \{a,e,i,o,u\}$.
+		\end{eg}
+		Inoltre, se un elemento $x$ appartiene all'insieme $X$ scriveremo $x\in X$. Se $x$ non appartiene ad $X$ scriveremo $x\nin X$. Anche l'appartenenza è un concetto primitivo e, pertanto, viene dato come intuitivo\footref{primitivo}. Quindi definiamo i seguenti concetti.
+		\begin{description}
+			\item[Sottoinsieme:] siano $X$ e $Y$ insiemi non necessariamente distinti. Diremo che $Y$ è un \emph{sottoinsieme} di $X$ ($Y\subseteq X$) se e solo se per ogni $y\in Y$ si ha $y \in X$ (ogni elemento di $Y$ appartiene ad $X$). Diremo che un sottoinsieme è \emph{proprio} quando $Y\neq X$.
+			\item[Uguaglianza:] diremo che $X=Y$ se e solo se $X\subseteq Y$ e $Y\subseteq X$ (ogni elemento di $X$ appartiene anche ad $Y$ e viceversa).
+		\end{description}
+		\begin{eg}
+			Consideriamo l'insieme $X=\{(x,y)\tc x,y\in\Z \land 3x+4y=1\}$ e l'insieme $Y=\{(-1-4z, 1+3z)\tc z\in\Z\}$. Essi\footnote{Il simbolo $\land$ indica la \emph{congiunzione logica} di due enunciati ed è, a sua volta, un enunciato che è vero solo quando i due enunciati di partenza sono entrambi veri. Altrimenti è falso.} sono uguali.
+		\end{eg}
+		\begin{es}
+			Dimostra che $X=Y$ sfruttando la definizione\footnote{Hint: dimostra che gli elementi di $Y$ risolvono l'equazione che definisce $X$ e che tutte le soluzioni dell'equazione di $X$ si scrivono come gli elementi di $Y$. Per il secondo punto un'idea è di sfruttare la scrittura parametrica di una retta.}.
+		\end{es}		
+		Dato un insieme $X$ e dei suoi sottoinsiemi $A$, $B$ e $C$, definiamo come segue le operazioni di \emph{intersezione} e \emph{unione}.
+		\begin{description}
+			\item[Intersezione:] $A\cap B=\{x\in X\tc x\in A \land x\in B\}$.
+			\item[Unione:] $A\cup B=\{x\in X\tc x\in A \lor x\in B\}$\footnote{Il simbolo $\lor$ indica la \emph{disgiunzione logica} di due enunciati ed è, a sua volta, un enunciato che è vero quando almeno uno dei due enunciati di partenza è vero. Altrimenti è falso.}.
+		\end{description}	
+		Entrambe queste operazioni godono di alcune proprietà:
+		\begin{itemize}
+			\item \textbf{Commutatività}: $A\cap B=B\cap A$ e analogo per $\cup$.
+			\item \textbf{Associatività}: $A\cap (B\cap C)=(A\cap B)\cap C$ e analogo per $\cup$.
+			\item \textbf{Distributività di $\cap$}: $\ A\cap (B\cup C)=(A\cap B)\cup (A\cap C)$.
+			\item \textbf{Distributività di $\cup$}: $\ A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$.
+		\end{itemize}
+		\begin{es}
+			Dimostra le proprietà elencate.
+		\end{es}
+		Si definisce poi l'operazione di \emph{sottrazione insiemistica} e, di conseguenza, l'operazione \emph{unaria} di \emph{complementare} come segue.
+		\begin{description}
+			\item[Sottrazione:] $X\smallsetminus A = \{x\in X\tc x\nin A\}$.
+			\item[Complementare:] il complementare di $A$ in $X$ è definito come $\compl{A} =X\smallsetminus A$.
+			\item[Leggi di De Morgan:] $\compl{A\cup B}=\compl{A}\cap\compl{B}$\quad e\quad $\compl{A\cap B}=\compl{A}\cup\compl{B}$.
+		\end{description}
+		\begin{es}
+			Riscrivi le Leggi di De Morgan con la sottrazione e dimostrale.
+		\end{es}
+		Definiamo quindi alcuni concetti fondamentali della teoria degli insiemi:
+		\begin{description}
+			\item[Insieme finito:] diremo che un insieme è \emph{finito} sse (se e solo se) esiste una biiezione tra l'insieme stesso ed un insieme $\{1,2,\ldots,n\}$ con $n\in\N$.
+			\item[Cardinalità:] la cardinalità di un insieme $X$ finito è, informalmente, il numero di elementi contenuti in $X$ e si indica con $|X|$. Se $X$ è in corrispondenza con $\{1,2,\ldots,n\}$, scriveremo $|X|=n$.
+			\item[Insieme Infinito:] un insieme si dice \emph{infinito}\footnote{Ricodiamo che esistono diversi tipi di infinito! Per esempio $|\R|>|\Q|=|\N|$.} se non è finito, poniamo $|X|=\infty$. Una definizione alternativa è la seguente: un insieme si dice infinito quando può essere messo in corrispondenza biunivoca con un suo sottoinsieme proprio.
+			\item[Insieme Vuoto:] l'\emph{insieme vuoto} $\emptyset$ come l'insieme che non contiene alcun elemento. Ovviamente, per ogni insieme $X$, $\emptyset\subseteq X$
+			\item[Parti di $X$:] l'\emph{insieme delle Parti} di un insieme $X$ è $\parti{X}=\{Y\tc Y\subseteq X\}$, cioè l'insieme di tutti i sottoinsiemi di $X$.
+		\end{description}
+		\begin{eg}
+			se $X=\{1,2\}$ allora $\parti{X}=\{ \emptyset, \{1\}, \{2\}, X \}$, nota che la cardinalità dell'insieme delle parti è uguale a $2$ elevato alla cardinalità di $X$, cioè: 
+			\begin{equation*} 
+				|\parti{X}|=2^{|X|}.
+			\end{equation*}
+		\end{eg}
+	
+		Se consideriamo un insieme $\I$ di indici allora possiamo definire una famiglia di sottoinsiemi $A_i$ di $X$ indicizzati da $i\in\I$, in simboli: $\{A_i\tc i\in\I\}$ oppure $\{A_i\}_{i\in\I}$. Questa famiglia sarà finita o infinita a seconda della cardinalità di $\I$, indipendentemente dalla cardinalità di $X$.
+		
+		Utilizzeremo simboli specifici per indicare intersezioni e unioni di famiglie di insiemi indicizzati e questi sono: 
+		\begin{align*} 
+			\bigcap_{i\in\I} A_i \defeq \{x\in X\tc \forall i\in\I:\ x\in A_i\}; \\ \bigcup_{i\in\I} A_i \defeq \{x\in X\tc \exists i\in\I:\ x\in A_i\}. 
+		\end{align*} 
+		In altre parole, l'intersezione di tutti gli $A_i$ è l'insieme degli elementi di $X$ che appartengono a tutti gli $A_i$, mentre l'unione sarà data da tutti gli elementi di $X$ che appartengono ad almeno uno degli $A_i$. Si tratta di ripetere l'operazione di intersezione o di unione per tutti gli insiemi della famiglia. Questa operazione è \emph{ben definita} per la proprietà associativa.
+		\begin{eg}
+			Sia $X=\{a,b,c,d\}$, $\I=\{1,2\}$, $A_1=\{a,c\}$ e $A_2=\{b,c\}$; allora calcoliamo $\bigcap_{i\in\{1,2\}}A_i=A_1\cap A_2=\{c\}$. Prova con l'unione. 
+		\end{eg} 
+		\begin{es}
+			In cosa consistono $\bigcap_{i\in\I}A_i$ e $\bigcup_{i\in\I}A_i$ quando $\I=\emptyset$?\footnote{Soluzione: \par $\bigcup_{i\in\I}A_i=\emptyset$ infatti è l'insieme di tutte quelle $x$ tali che per qualche $i\in\I$ appartengono al corrispondente $A_i$, ma non essendoci alcun $A_i$ non può esistere alcuna $x$ siffatta. \par $\bigcap_{i\in\I}A_i=X$ infatti supponiamo per assurdo che un certo $x_0$ non appartenga all'intersezione, questo può succedere solo a patto che esista un certo $i$ per cui il corrispondente $A_i$ non contiene $x_0$, ma non esiste alcun $A_i$ che escluda $x_0$ dato che non esiste proprio alcun $A_i$.}
+		\end{es}
+		\begin{es} \label{fam0_1}
+			Sia $X=[0,1]\subset\R$ e sia $n\in\N$ e consideriamo la famiglia di sottoinsiemi $A_n=\{x\in X\tc \frac{1}{n}\leq x\leq 1\}$, verifica che $\bigcup_{n\in\N}A_n=(0,1]$.\footnote{Hint: ricorda che in un intervallo, quando la parentesi è tonda l'estremo è escluso, quando è quadra l'estremo è incluso. Per rispondere all'esercizio, poi, aiutati con la seguente domanda: è vero che, preso un numero $x$ qualsiasi tale che $0<x\leq 1$ esisterà un certo $A_n$ che lo contiene?}
+		\end{es}
+		\begin{es}
+			Nelle stesse ipotesi dell'esercizio \ref{fam0_1}, verifica che $\bigcap_{n\in\N}A_n=\{1\}$.
+		\end{es}
+		\noindent\Egrave essenziale, adesso, introdurre alcune ulteriori definizioni:
+		\begin{description}
+			\item[Prodotto Cartesiano:] dati due insiemi $X$ e $Y$ non necessariamente distinti, il \emph{prodotto cartesiano} di essi è: $X\times Y=\{(x,y)\tc x\in X \land y\in Y\}$, ossia l'insieme delle coppie ordinate in cui il primo elemento appartiene al primo insieme e il secondo elemento al secondo insieme.
+		\end{description}
+		Per prodotti cartesiani di $n$ insiemi si otterranno delle $n$-uple di elementi in cui l'$i$-esimo elemento appartiene all'$i$-esimo insieme ($i\leq n$).
+		\begin{eg}
+			Se $X=Y=\R$ allora $X\times Y=\R\times\R=\R^2$ ossia il piano cartesiano. Lo spazio $3$-dimensionale si indicherà con $\R^3$, mentre per un generico $n\in\N$ otteniamo lo spazio $n$-dimensionale $\R^n$. Riprenderemo questo esempio all'inizio del capitolo $2$.
+		\end{eg}
+		\begin{description}
+			\item[Partizione di un insieme:] dato un insieme non vuoto $X$, una \emph{partizione} $\Partizione$ di $X$ è una famiglia di sottoinsiemi non vuoti di $X$ aventi due proprietà:
+			\begin{enumerate}
+				\item comunque presi due elementi distinti di questa famiglia, la loro intersezione è vuota. In simboli: 
+				\begin{equation*} 
+					\forall A,B\in\Partizione,\ A\neq B\allora A\cap B=\emptyset 
+				\end{equation*}
+				\item l'unione di tutti gli elementi della famiglia è $X$. In simboli: \begin{equation*} 
+					\bigcup_{A\in\Partizione}A=X.
+				\end{equation*}
+			\end{enumerate}
+		\end{description}
+		\begin{eg}
+			L'insieme $\{X\}$ è una partizione banale di $X$.
+		\end{eg}
+		\begin{eg}
+			Un'altra banale è data dall'insieme dei singoletti: $\{\{x\}\tc x\in X\}$.
+		\end{eg}
+		\begin{eg}
+			$\Partizione=\{\{1\},\{2,3\},\{4\}\}$ è una partizione di $X=\{1,2,3,4\}$.
+		\end{eg}
+		\begin{es}
+			Quale cardinalità può avere \Partizione, al massimo, se $|X|=n\in\N$?
+		\end{es}
+	
+	\section{Relazioni e Funzioni}
+		
+		\Egrave interessante studiare l'interazione tra elementi di insiemi e tra insiemi stessi. Per questo motivo introduciamo la seguente definizione.
+		\begin{description}
+			\item[Corrispondenza:] Siano $A$ e $B$ due insiemi non vuoti e non necessariamente distinti. Una \emph{corrispondenza} tra $A$ e $B$ è un sottoinsieme $\Corr$ di $A\times B$.
+		\end{description}
+		Nota che le \emph{funzioni} sono un particolare tipo di corrispondenza. Infatti, se consideriamo una funzione $f:A\to B$, il suo grafico $\mathcal{G}=\{(a,f(a))\tc a\in A\}$ è una corrispondenza.
+		Inoltre vale anche il viceversa: data una corrispondenza $\Corr$ tale che: \begin{equation*} 
+			\forall a\in A\ \exists! b\in B\tc (a,b)\in\Corr, \quad \footnote{Il simbolo $\exists!$ denota contemporaneamente esistenza ed unicità.} 
+		\end{equation*} allora certamente esiste una funzione $f_{\Corr}:A\to B$, eventualmente definita punto per punto, che ha $\Corr$ per grafico.
+		\begin{description}
+			\item[Relazione:] una \emph{relazione} $\mathcal{R}$ su $A$ è un sottoinsieme di $A\times A=A^2$.
+		\end{description}
+	
+		In effetti si potrebbe anche dire che una relazione è una particolare corrispondenza in cui $A=B$, ossia quando consideriamo due insiemi coincidenti.
+		\begin{eg}\label{dist_rel}
+			Sia $A=\R^2$, ossia $A$ è il piano cartesiano standard, un esempio di relazione su $A\times A$ può essere dato da $\mathcal{R}=\{(x,y)\in A\times A\tc d_2(x,y)=1\}$, ossia due punti sono in relazione se la loro distanza euclidea $d_2$ è uguale ad $1$.
+		\end{eg}
+		\begin{eg}
+			Sia $A=\R$, possiamo considerare $\mathcal{R}=\{(x,y)\in A\times A\tc x\leq y\}$.
+		\end{eg}
+		\begin{eg}
+			Sia $A=\{$rette nel piano$\}$, $\mathcal{R}=\{(x,y)\in A\times A\tc x\parallela y\}$.
+		\end{eg}
+		\begin{eg}
+			sia $A=\{$persone esistite$\}$, $\mathcal{R}=\{(x,y)\in A\times A\tc x$ è figlio di $y\}$.
+		\end{eg}
+		L'idea di relazione esprime la necessità di legare tra loro elementi di $A$ con una stessa caratteristica. A loro volta, le relazioni hanno delle proprietà che siamo interessati a studiare:
+		\begin{itemize}
+			\item $\mathcal{R}$ è \textbf{riflessiva} sse $\forall a\in A:\ (a,a)\in\mathcal{R}$.
+			\item $\mathcal{R}$ è \textbf{simmetrica} sse $\forall a,b\in A:\ (a,b)\in\mathcal{R} \allora (b,a)\in\mathcal{R}$.
+			\item $\mathcal{R}$ è \textbf{transitiva} sse $\forall a,b,c\in A:\ (a,b)\in\mathcal{R} \land (b,c)\in\mathcal{R} \allora (a,c)\in\mathcal{R}$.
+			\item $\mathcal{R}$ è \textbf{di equivalenza} sse è riflessiva, simmetrica e transitiva.
+		\end{itemize}
+		Se $X$ è un insieme non vuoto e $\mathcal{R}$ una relazione di equivalenza su $X$, definiamo per ogni $x\in X$ la sua classe di equivalenza.
+		\begin{description}
+			\item[Classe di equivalenza:] la \emph{classe di equivalenza} di $x\in X$, spesso chiamata solo \emph{classe}, è $\class{x} = \{a\in X\tc (x,a)\in\mathcal{R}\}$.
+		\end{description}
+		\begin{es}
+			La relazione dell'esempio \ref{dist_rel} è di equivalenza?
+		\end{es}
+		\begin{es}
+			Dimostra che $\class{x}\neq\emptyset$.
+		\end{es}
+		\begin{prop}
+			Per ogni $x,y\in X$ accade una delle seguenti opzioni:
+			\begin{enumerate}
+				\item $\class{x}=\class{y}$,
+				\item $\class{x}\cap\class{y}=\emptyset$.
+			\end{enumerate}
+		\end{prop}
+		\begin{proof}
+			Le possibilità sono due: o l'intersezione è vuota, nel qual caso non abbiamo nulla da dimostrare, oppure esiste $z\in\class{x}\cap\class{y}$. Consideriamo quindi questo secondo caso. Vogliamo mostrare che ogni elemento $t\in\class{x}$ è in relazione anche con $y$ e, di conseguenza, appartiene anche a $\class{y}$. Ma, per costruzione, $(x,t)\in\mathcal{R}$; inoltre, per ipotesi, $(z,x)\in\mathcal{R}$. Applicando la proprietà transitiva, $(z,t)\in\mathcal{R}$.
+			Sempre per ipotesi, anche $(y,z)\in\mathcal{R}$ e, per transitività, $(z,t)\in\mathcal{R}$ implica $(y,t)\in\mathcal{R}$. 
+			
+			In altre parole, per l'arbitrarietà di $t$, ogni elemento di $\class{x}$ sta anche in $\class{y}$. Abbiamo dimostrato che $\class{x}\subseteq\class{y}$. In modo analogo dimostriamo che $\class{y}\subseteq\class{x}$ e quindi che $\class{x}=\class{y}$. Cioè, se l'intersezione non è vuota, le due classi coincidono e questo conclude la dimostrazione.
+		\end{proof}
+		\begin{es}
+			Termina la dimostrazione mostrando che $\class{y}\subseteq\class{x}$.
+		\end{es}
+		\begin{description}
+			\item[Insieme Quoziente:] definiamo l'\emph{insieme quoziente} di un insieme $X$ rispetto alla relazione di equivalenza $\mathcal{R}$ come l'insieme delle classi di equivalenza. In simboli: $X/\mathcal{R}=\{[x]_{\mathcal{R}}\tc x\in X\}$.
+		\end{description}
+		\begin{es}
+			Dimostra che $X/\mathcal{R}$ è una partizione di $X$.
+		\end{es}
+		Esiste tuttavia anche una costruzione inversa: sia $\Partizione$ una partizione di $X$, dirò che due elementi $a$ e $b$ di $X$ sono in relazione se appartengono allo stesso elemento $S$ di $\Partizione$. Cioè: $\mathcal{R}=\{(a,b)\in X\times X\tc \exists S\in\Partizione \land a,b\in S\}$. Quindi $\mathcal{R}$ è di equivalenza e $\Partizione=X/\mathcal{R}$.
+		\begin{es}
+			Dimostra che $\mathcal{R}$ così definita è di equivalenza.
+		\end{es}
+		\begin{es}\label{classi_resto}
+			Dato $n\in\N$ e data $\mathcal{R}_n=\{(a,b)\in \Z\times\Z\tc n$ divide\footnote{Sia $a\in\Z$, diremo che $n\in\N$ divide $a$ sse $\exists b\in\Z\tc a=b\cdot n$.} $a-b\}$, dimostra che $\mathcal{R}_n$ è di equivalenza indipendentemente dal valore di $n$. Determina tutte le classi di equivalenza quando $n=2$ e quando $n=3$. Cosa succede se $n=0$? E se $n=1$?\footnote{Per $n=2$ abbiamo $\mathcal{R}_2=\{[0]_{\mathcal{R}}, [1]_{\mathcal{R}}\}$ ossia la relazione che distingue tra pari e dispari. Per $n=3$ abbiamo $\mathcal{R}_3=\{[0]_{\mathcal{R}}, [1]_{\mathcal{R}}, [2]_{\mathcal{R}}\}$ ossia distinguiamo tra quei numeri che hanno resto $0,1,2$ nella divisione per $3$. Se $n=0$ allora due numeri sono in relazione se e soltanto se sono uguali. Se $n=1$ ogni numero è in relazione con ogni altro.}
+		\end{es}
+		Con l'esercizio (\ref{classi_resto}), abbiamo introdotto senza troppa sofferenza il concetto di \emph{classi di resto modulo $n$}, alla base dell'artimetica modulare (chiamata anche, orribilmente, \virg{aritmetica dell'orologio}).
+		Sorprendentemente, l'aritmetica modulare e i suoi sviluppi sono un potente strumento nella risoluzione di questioni relative, principalmente, alla teoria dei numeri.
+	
+	\section{Operazioni Binarie}
+		
+		Sia $X$ un insieme non vuoto. Un solo insieme è una struttura piuttosto \virg{arida} con cui operare, abbiamo bisogno di aggiungergli \emph{qualcosa}: definiamo un'operazione binaria tra coppie di elementi:
+		\begin{description}
+			\item[Operazione binaria:] un'\emph{operazione binaria} su $X$ è un'applicazione\footnote{\virg{Applicazione} è un sinonimo di \virg{funzione}.} \begin{equation*} 
+				\heartsuit:X\times X\to X 
+			\end{equation*} che, a ogni coppia di elementi $a, b \in X$, cioè a ogni coppia ordinata $(a, b) \in X\times X= X^2$, associa uno e un solo elemento di $X$, definito come $a\heartsuit b$.
+		\end{description}
+		Poiché l'operazione associa a coppie di elementi in $X$ un \virg{risultato} sempre in $X$, l'operazione viene definita \emph{interna} a $X$.
+		\begin{eg}
+			Se $X=\N$, oppure $X=\Z$ o, ancora, $X=\R$, allora un esempio di operazione interna può essere dato da $\heartsuit=+$ (formalmente sono \virg{$+$} diversi!).
+		\end{eg}
+		\begin{eg}
+			Se $X=\{0,1\}$ allora posso definire un'operzione interna punto per punto:  \begin{equation*} 
+				0\heartsuit0=0, \qquad 0\heartsuit1=1, \qquad 1\heartsuit0=1, \qquad 1\heartsuit1=0.
+			\end{equation*} 
+		In questo caso si potrebbe provare a dare anche una caratterizzazione esplicita dell'operazione definita punto per punto, in effetti possiamo usare $a\heartsuit b=(a+b)\cdot(2-a-b)$ e le due operazioni coincidono. Si noti che questo esempio corrisponde con lo \textit{XOR} logico.
+		\end{eg}
+		Ovviamente non è scontata la richiesta che il risultato dell'operazione faccia parte dell'insieme di partenza: si consideri l'operazione $a\star b=a^{-b}$ definita su $X=\N$: è chiaro che per qualsiasi valore di $b$ diverso da $0$, l'operazione restituisce un risultato ($=\frac{1}{a^b}$) non naturale. L'operazione $\star$ è però certamente interna ad $\R$, ma anche solo a $\Q$. Conviene quindi dare la seguente definizione:
+		\begin{description}
+			\item[Sottoinsieme Chiuso:] sia $\heartsuit$ un'operazione binaria su $X$. Un sottoinsieme $Y$ di $X$ si dice \emph{chiuso} rispetto a $\heartsuit$ se per ogni $y_1,y_2\in Y,\ y_1\heartsuit y_2\in Y$. Cioè $\heartsuit$ è interna a $Y$.
+		\end{description}
+		Dato un sottoinsieme $Y$ chiuso rispetto ad $\heartsuit$, posso definire la restrizione\footnote{Generalmente si tratta di una distinzione determinante, tuttavia per noi avrà soltanto un significato formale: l'operazione è sempre la stessa ma sottolineiamo che accetterà come fattori solo elementi di $Y$.} di $\heartsuit$ ad $Y$, ossia l'operazione $\heartsuit_{Y}:Y\times Y\to Y$ tale da essere interna ad $Y$.
+		
+		Di un'operazione, come al solito, possiamo chiederci che proprietà abbia e queste possono essere:
+		\begin{itemize}
+			\item \textbf{Commutatività}: se $a\heartsuit b=b\heartsuit a$;
+			\item \textbf{Associatività}: se $(a\heartsuit b)\heartsuit c=a\heartsuit( b\heartsuit c) = a\heartsuit b\heartsuit c$.
+		\end{itemize}
+		\begin{es}
+			Dimostra per induzione la proprietà associativa con $n$ elementi
+		\end{es}
+		\begin{fatto}
+			Ogni proprietà di tipo equazionale di $\heartsuit$ (come commutatività e associatività) è ereditata anche dalla sua restrizione $\heartsuit_{Y}$.
+		\end{fatto}
+		In genere, a questo punto, si parlerebbe della presenza nell'insieme di un elemento neutro (unità\footnote{Attenzione alla definizione di \virg{unità}: è diversa dall'idea che abbiamo in mente! Infatti l'$1$ è unità per l'operazione di moltiplicazione tra numeri, mentre l'unità (in senso algebrico) dell'addizione è lo $0$.}) rispetto all'operazione $\heartsuit$. Tuttavia, non potendo dare per scontata la commutatività, adotteremo un approccio diverso:
+		\begin{description}
+			\item[Unità sinistra:] $u_s\in X$ si dice \emph{unità sinistra} rispetto a $\heartsuit$ sse per ogni $x \in X$ si ha $u_s\heartsuit x=x$.
+			\item[Unità destra:] analogamente, $u_d\in X$ si dice \emph{unità destra} rispetto a $\heartsuit$ sse per ogni $x \in X$ si ha $x\heartsuit u_d=x$.
+			\item[Unità bilatera:] $u\in X$ si dice \emph{unità bilatera} rispetto a $\heartsuit$ sse per ogni $x \in X$ si ha $x\heartsuit u  = u\heartsuit x=x$ (per l'unità bilatera vale la commutatività).
+		\end{description}
+		\begin{prop}
+			Se in $X$ esiste un'unità sinistra $u_s$ e un'unità destra $u_d$ rispetto a $\heartsuit$ allora:
+			\begin{enumerate}[a.]
+				\item $u_s=u_d$;
+				\item $u_s$ è l'unica unità sinistra e $u_d$ l'unica destra;
+				\item $u_s=u_d=u$ è l'unica unità bilatera.
+			\end{enumerate}
+		\end{prop}
+		\begin{proof}
+			Dimostriamo punto per punto.
+			
+			\textbf{a.} per definizione di unità sinistra abbiamo che $u_s\heartsuit x=x$ per qualsiasi $x\in X$, in particolare vale se $x=u_d$. Quindi $u_s\heartsuit u_d=u_d$. Analogamente, per definizione di unità destra abbiamo che $y\heartsuit u_d=u_d$ per qualsiasi $y\in X$, in particolare vale se $y=u_s$. Quindi $u_s\heartsuit u_d=u_s$. Concludendo: $u_d=u_s\heartsuit u_d=u_s$.
+			
+			\textbf{b.} Supponiamo che $\overline{u}_s$ sia un'altra unità sinistra, allora per la dimostrazione precedente $\overline{u}_s=u_d$, ma anche $u_s=u_d$, quindi $\overline{u}_s=u_s$. L'unicità di $u_d$ si dimostra in modo analogo.
+			
+			\textbf{c.} Dato che $u_s=u_d$, possiamo rinominare il valore comune $u$ e, dato che $x=u_s\heartsuit x = x\heartsuit u_d = x$, allora $x=u\heartsuit x = x\heartsuit u = x$ quindi $u$ è unità bilatera.
+		\end{proof}
+		Analogamente a quanto detto per l'unità, data l'operazione $\heartsuit$ con unità $u$, anche per l'esistenza di un elemento inverso dobbiamo distinguere vari casi:
+		\begin{description}
+			\item[Inverso sinistro:] $x_s^{-1}$ si dice \emph{inverso sinistro} di $x\in X$ sse $x_s^{-1}\heartsuit x=u$.
+			\item[Inverso destro:] $x_d^{-1}$ si dice \emph{inverso destro} di $x\in X$ sse $x\heartsuit x_d^{-1}=u$.
+			\item[Inverso bilatero:] $x^{-1}$ si dice \emph{inverso bilatero} di $x\in X$ sse $x\heartsuit x^{-1}=x^{-1}\heartsuit x=u$.
+		\end{description}
+		La dicitura $\ ^{-1}$ non deve trarre in inganno: non ha nulla a che vedere con la frazione $\frac{1}{x}$. \Egrave soltanto un metodo standard per indicare l'inverso in una generica operazione. Ad esempio, se identifichiamo $\heartsuit$ con l'usuale somma tra numeri, l'inverso $x^{-1}$ di $x$ si indicherà con $-x$. Inoltre, non sempre esiste un inverso per un'operazione.
+		\begin{es} 
+			Presi $X=\R\cup\{-\infty\}$ ed $a,b\in X$, dimostra che l'addizione tropicale ($a\oplus b=max\{a,b\}$) non ammette inverso.
+		\end{es}
+		\begin{prop}
+			Se $\heartsuit$ è associativa e in $X$ esistono un inverso sinistro $x_s^{-1}$ e un inverso destro $x_d^{-1}$ rispetto a $\heartsuit$ allora:
+			\begin{enumerate}[a.]
+				\item $x_s^{-1}=x_d^{-1}$;
+				\item $x_s^{-1}$ e $x_d^{-1}$ sono unici;
+				\item $x_s^{-1}=x_d^{-1}=x^{-1}$ è inverso bilatero di $x\in X$.
+			\end{enumerate}
+		\end{prop}
+		\begin{proof}
+			Procediamo ancora per punti.
+			
+			\textbf{a.} Scriviamo $(x_s^{-1}\heartsuit x)\heartsuit x_d^{-1}$, per associatività è uguale a $x_s^{-1}\heartsuit (x\heartsuit x_d^{-1})$. Ma la prima scrittura è $u\heartsuit x_d^{-1}$, a sua volta uguale alla seconda che vale $x_s^{-1}\heartsuit u$. Essendo uguali le due scritture ed essendo $u$ elemento neutro, otteniamo che $x_s^{-1}=x_d^{-1}$
+			
+			\textbf{b.} Supponiamo $x_s^{-1}\neq \tilde{x}_s^{-1}$ entrambi inversi sinistri, quindi $x_s^{-1}\heartsuit x=u=\tilde{x}_s^{-1}\heartsuit x$. Consideriamo solo $x_s^{-1}\heartsuit x=\tilde{x}_s^{-1}\heartsuit x$: moltiplichiamo a destra entrambi per $x_d^{-1}$ e usiamo la proprietà associativa: $x_s^{-1}\heartsuit (x\heartsuit x_d^{-1})=\tilde{x}_s^{-1}\heartsuit (x\heartsuit x_d^{-1})$ che, svolgendo i conti, porta a: $x_s^{-1}\heartsuit u=\tilde{x}_s^{-1}\heartsuit u$ ossia $x_s^{-1}=\tilde{x}_s^{-1}$
+			
+			\textbf{c.} Esercizio.
+		\end{proof}
+		In effetti, ci siamo posti il problema di garantire che il risultato di un'operazione fosse interno all'insieme $X$ su cui è definita. Ma non abbiamo pensato all'eventualità in cui uno dei fattori fosse esterno all'insieme $X$. Questo, in effetti, dà luogo a questioni parecchio interessanti che, sotto spoglie innocenti, si incontrano molto presto nel percorso di studi:
+		\begin{description}
+			\item[Operazione Esterna:] dati due insiemi non vuoti $E$ ed $X$, distinti, diremo che $\ast:E\times X\to X$ è un'\emph{operazione esterna} (ad $X$), che associa alla coppia ordinata $(e,x)$ un unico elemento $e*x$ di $X$.
+		\end{description}
+		\begin{eg}
+			Sia $V=\{$insieme dei vettori a due componenti reali$\}=\R^2$ ed $E=\R$, un esempio elementare di operazione esterna è la moltiplicazione per scalare di un vettore: dato $r\in\R$ e $(a,b)\in V$, definiamo $r\ast(a,b)\defeq(r\cdot a,r\cdot b)$.
+		\end{eg}
+		In caso di operazione esterna, diremo che l'insieme $E$ \emph{agisce} su $X$.
+	
+	\section{Strutture Algebriche}
+		
+		Siamo estremamente interessati a classificare, tramite proprietà, gli insiemi e le loro operazioni. Perché questo interesse? La teoria che studieremo riguarda un caso molto specifico, ma il linguaggio che si introduce con le strutture algebriche permette di espanderla parecchio. Un'introduzione a queste nozioni ci serve quindi per dare un'idea della generalità delle idee di cui si parlerà e, ottimisticamente parlando, per dare una base utile a futuri approfondimenti.
+		
+		Innanzitutto, insiemi dotati di una o più operazioni binarie (interne ed eventualmente anche esterne) sono detti \emph{strutture algebriche} e si indicano con $(X,\heartsuit_1,\ldots,\heartsuit_n)$.
+		\begin{subsubsection}{Gruppi}
+			Sia $X$ un insieme non vuoto e $\heartsuit$ un'operazione interna ad esso:
+			\begin{description}
+				\item[Gruppo:] $(A,\heartsuit)$ è un \emph{gruppo} se $\heartsuit$ è associativa, ammette elemento neutro e ogni elemento ha un inverso.
+				\item[Gruppo Commutativo:] se $(A,\heartsuit)$ è un gruppo e $\heartsuit$ gode della proprietà commutativa, allora si parla di gruppo \emph{commutativo} o \emph{abeliano}.
+			\end{description}
+			\begin{eg}
+				$(\N,+)$ non è un gruppo in quanto non c'è l'inverso per nessun elemento diverso dallo $0$ (infatti è detto \emph{\textbf{monoide} commutativo} o \emph{semigruppo commutativo con unità}).
+			\end{eg}
+			\begin{eg}
+				$(\Z,+)$ è un gruppo, ma $(\Z,\cdot)$ no.
+			\end{eg}
+			\begin{eg}
+				$\Q$ forma un gruppo con l'operazione di addizione ma, se considerassimo la moltiplicazione dovremmo togliere lo $0$, altrimenti cadrebbe la richiesta di esistenza dell'inverso.
+			\end{eg}
+			\begin{eg}
+				Sia $X=\{$mosse del cubo di Rubik$\}$ e sia $\star$ l'operazione di composizione delle mosse (comporre due mosse vuol dire farle in sequenza). Questa struttura è un gruppo\footnote{Nel 1979, David Breyer Singmaster pubblicò il libro \emph{Notes on Rubik's \virg{Magic Cube}}, che includeva una trattazione matematica del cubo di Rubik e la possibilità di risolverlo in modo generale sfruttando la teoria dei gruppi. A quel tempo era molto difficile da reperire, infatti lo vide per la prima volta solo un anno prima al congresso internazionale dei matematici. Il mese dopo, per entrare in possesso di un cubo dovette scambiarlo con una copia di un libro di Escher.} ma non vale la commutatività.
+			\end{eg}
+		\end{subsubsection}
+		\begin{subsubsection}{Anelli}
+			Abbiamo anticipato che una struttura algebrica può contemplare più operazioni: introduciamo quindi anche una seconda operazione $\ast$. Parleremo di \emph{somma} e \emph{prodotto} della struttura, senza tuttavia confonderli con la somma e il prodotto a cui siamo abituati: la somma e il prodotto usuali sono solo uno di tanti esempi di somme e prodotti.
+			\begin{description}
+				\item[Anello:] una terna $(X,\heartsuit,\ast)$ è un \emph{anello} quando $(X,\heartsuit)$ è un gruppo abeliano con elemento neutro $e$, $(X,\ast)$ è un monoide e valgono le proprietà distributive: per ogni $a,b,c\in A$:
+				\begin{align*}
+					a\ast(b\heartsuit c)=(a\ast b)\ \heartsuit\ (a\ast c); \\
+					(a\heartsuit b)\ast c = (a\ast c)\ \heartsuit\ (b\ast c).
+				\end{align*}
+				
+				\item[Anello commutativo:] un anello è commutativo quando $\ast$ è commutativa.
+
+			\end{description}
+			\begin{eg}
+				$X=\{0\}$ allora $(X,+,\cdot)$ è un anello. In generale, $X=\{e\}$, con $e$ elemento neutro della prima operazione, forma un anello detto \emph{banale}.
+			\end{eg}
+			\begin{eg}
+				$(\N,+,\cdot)$ non è un anello, $(\Z,+,\cdot)$ invece lo è. Inoltre, anche $\Z$ con l'aggiunta di tutte le frazioni $\frac{z}{10^n}$ è un anello con le usuali operazioni.
+			\end{eg}
+			\begin{eg}
+				Sia $X=\{0,1\}$, allora $(X,\dot{\lor},\land)$ forma un anello finito (cioè con un numero finito di elementi) commutativo, dove $\dot{\lor}$ è lo $XOR$.
+			\end{eg}
+			\begin{eg}
+				L'insieme delle classi di resto modulo $n$ (si indica $\Z/n\Z$) forma un anello finito commutativo (avevamo già visto $\Z/2\Z=\{[0]_2, [1]_2\}$).
+			\end{eg}
+			\begin{eg}
+				Un argomento che tratteremo più avanti sono le matrici\footnote{Per ora, ha senso immaginarle come delle \virg{tabelle} di numeri}, in effetti l'insieme delle matrici quadrate di \virg{grandezza} $n\geq2$ fissata forma un anello non commutativo.
+			\end{eg}
+			\begin{es}
+				I polinomi ad una variabile formano un anello commutativo?
+			\end{es}
+			\begin{es}
+				Dimostra che $(\{0,1\},\dot{\lor},\land)$ è un anello commutativo.
+			\end{es}
+			Ogni anello $(X,\heartsuit,\ast)$ gode di alcune proprietà interessanti.
+			\begin{prop}[Proprietà dello Zero\footnote{Ricorda che $e$ è l'elemento neutro dell'operazione $\heartsuit$}]
+				$\forall a\in X,\ e\ast a=a\ast e=e$.
+			\end{prop}
+			\begin{proof}
+				Consideriamo, usando la proprietà distributiva, $a*a=(a\heartsuit e)*a$ quindi, svolgendo i conti, otteniamo $a*a=(a*a) \heartsuit (e*a)$. 
+				
+				In un gruppo additivo valgono le leggi di cancellazione\footnote{Basta eseguire l'operazione di gruppo con l'inverso dell'elemento che si vuole cancellare}, quindi possiamo usarle per l'operazione $\heartsuit$ ed eliminare un $(a*a)$ da entrambe le parti, ottenendo $e=a*e$. Analogo per $e=e*a$.
+			\end{proof}
+			Da questo momento in poi chiameremo, quando non sarà ambiguo farlo, \virg{$0$} l'elemento neutro della prima operazione e \virg{$1$} l'elemento neutro della seconda. In caso di ambiguità, invece, ci serviremo di un pedice. Inoltre l'inverso della prima operazione, qui indicata con $\heartsuit$ e che di solito è la somma, sarà indicato con un \virg{$-$} davanti (ad esempio $-a$ per $a$).
+			
+			Questo cambio di nomi non è stato fatto già a partire dalla Proposizione precedente perché, a mio parere, ne avrebbe perso in bellezza. Invito tuttavia a riscriverla, dimostrazione inclusa, usando $0$ al posto di $e$, per comprenderne il nome e renderla più illuminante e intuitiva.
+			\begin{prop}[Regola dei Segni]
+				$\forall a,b\in X,\ (-a)\ast b=a\ast(-b)=-(a\ast b)$.
+			\end{prop}
+			\begin{proof}
+				\Egrave una conseguenza della Proposizione precedente e di $0=b\heartsuit(-b)$, in particolare possiamo scrivere
+				\begin{equation*}
+					 0=a*0=a*(b\heartsuit(-b))=a*b\heartsuit a*(-b).
+				\end{equation*}
+				In altre parole abbiamo ottenuto $0=a*b\heartsuit a*(-b)$, cioè sappiamo che $a*(-b)$ è l'opposto di $(a*b)$ rispetto all'operazione $\heartsuit$, quindi è uguale a $-(a*b)$.
+			\end{proof}
+			Per le scritture utilizzate, un anello banale è l'unico anello in cui accade che lo $0$ e l'$1$ coincidono, volendo: in un anello banale $0_A=1_A$.
+			Altrimenti vale quanto segue:
+			\begin{prop}
+				Se $(A,\heartsuit,*)$ è un anello e $|A|\geq2$ allora $1_A\neq0$.
+			\end{prop}
+			\begin{proof}
+				Supponiamo $a\in A,\ a\neq0_A$ allora $a*1_A=a$ ma, per la proprietà
+				dello zero, $a*0_A=0_A$, quindi avendo scelto $a\neq0_A$ deduciamo che $1_A\neq0_A$.
+			\end{proof}
+			In generale, non possiamo neppure dare per scontato che il prodotto di due numeri diversi da $0$ sia, a sua volta, diverso da $0$, anzi: in alcuni anelli è addirittura possibile che succeda.
+			\begin{description}
+				\item[Divisore dello zero:] un elemento $a\in A,\ a\neq0$ si dice \emph{divisore dello zero} sse esiste almeno un altro elemento, anch'esso diverso dallo zero, tale che $a*b = 0$ oppure $b*a = 0$ (l’anello non è necessariamente commutativo).
+				\item[Dominio di Integrità:] un anello commutativo privo di divisori dello zero si dice \emph{dominio di integrità}.
+				
+			\end{description}
+			In effetti, esiste un fatto interessante a riguardo, di cui però non ci interessa la dimostrazione (è semplice, si può provare a fare come esercizio):
+			\begin{fatto}
+				Un anello $A$ è privo di divisori dello zero se e solo se valgono le leggi di cancellazione per il prodotto, ovvero se $\forall a\neq0,\forall x,y\in A$ si ha che $ax = ay \allora x = y$ (analogo per $xa = ya$).
+			\end{fatto}
+			Potrebbe sembrare, a prima vista, molto difficile trovare esempi di \emph{oggetti matematici} che siano allo stesso tempo utili e abbiano divisori dello zero. Un esempio, come anticipato, lo vedremo quando (all'inizio del prossimo capitolo) introdurremo matrici. Un altro esempio piuttosto semplice lo possiamo invece vedere già da ora:
+			\begin{eg}
+				Consideriamo ancora una volta le classi di resto e, in particolare, $\Z/6\Z$ cioè l'insieme degli interi quozientato rispetto alla relazione \virg{$a$ ha lo stesso resto di $b$ nella divisione per $6$} con le usuali operazioni di somma e prodotto tra interi.
+				L'insieme $\Z/6\Z$ è quindi un insieme di classi di equivalenza, cioè $\Z/6\Z=\{[0]_6,[1]_6,[2]_6,[3]_6,[4]_6,[5]_6\}$ che è l'insieme delle classi di tutti i possibili resti nella divisione per $6$. 
+				
+				Per fissare le idee: $13$ ha resto $1$ nella divisione per $6$, quindi sta nella classe $[1]_6$; $9$ sta nella classe $[3]_6$ e, come ci si aspetterebbe, $22(=13+9)$ sta nella classe $[4]_6=[1]_6+[3]_6$ (ossia basta sommare il rappresentante). Inoltre $117(=13\cdot9)$ sta nella classe $[3]_6=[1]_6\cdot[3]_6$.
+				
+				\Egrave evidente che $2\nin[0]_6$ e che anche $3\nin[0]_6$, infatti nessuno dei due numeri è divisibile per $6$, ma $2\cdot3=6\in[0]_6$. Quindi il prodotto di due elementi non nulli (ossia $[2]_6$ e $[3]_6$) in $\Z/6\Z$ ha risultato nullo.
+			\end{eg}
+			\begin{es}\label{primi}
+				Esistono degli $n\in\N$ per cui $\Z/n\Z$ non ha divisori dello zero?
+			\end{es}
+			\noindent Ne approfittiamo per dare due ulteriori definizioni:
+			\begin{description}
+				\item[Numero Primo:] un numero $p\in\Z,\ p\neq\pm1$ si dice \emph{primo} se ogni volta che $p\mid a\cdot b$,\footnote{$a\mid b$ si legge \virg{$a$ divide $b$}.} allora o $p\mid a$ oppure $p\mid b$.
+				\item[Numero Irriducibile:] un numero $p$ è \emph{irriducibile} sse è divisibile soltanto per se stesso e per $\pm1$.
+			\end{description}
+			Quest'ultima definizione è quella che normalmente utilizziamo per indicare cos'è un numero primo. Il motivo è che, seppure in generale non siano definizioni equivalenti, per i numeri interi si può dimostrare che coincidono e, a quel punto, quella \virg{solita} è la più semplice delle due da usare. Nota che $0$ in un dominio di integrità è primo.
+			\begin{eg}
+				Se consideriamo l'anello $\Z(\sqrt{-5})=\{a+b\sqrt{-5}\tc a,b\in\Z\}$ con l'usuale somma e prodotto, il numero $9$ si può scomporre sia come $3\cdot3$ sia come $(2+\sqrt{-5})(2-\sqrt{-5})$. Si può provare che tutti e quattro questi fattori sono irriducibili, ma nessuno di essi è primo. Infatti, ad esempio, $3\mid9$, ma $3\nmid(2+\sqrt{-5})$ e $3\nmid(2-\sqrt{-5})$.
+			\end{eg}
+		
+			In ogni anello si può dimostrare che ogni primo è anche irriducibile.
+			In realtà in anelli come $\Z$, in cui ogni elemento può essere decomposto in un unico modo come prodotto di irriducibili, si può dimostrare che i due concetti coincidono.
+			Ciò giustifica il classico utilizzo di \virg{numero primo} per indicare un numero che non può essere diviso da elementi diversi da $1$ e se stesso\footnote{In realtà, come al solito, è un pelo più complesso di così: si chiede che un irriducibile possa essere diviso solo per elementi invertibili, ovvero che ammettono un inverso multiplicativo,}. Per ovvi motivi, non proseguiremo oltre in questa direzione. \textit{«Non ti crucciare: vuolsi così colà dove si puote ciò che si vuole, e più non dimandare.»}.
+			
+			\begin{comment}
+				In effetti, affinché le due definizioni coincidano, abbiamo bisogno che il nostro anello sia un \emph{Principal Ideal Domain}, ossia \virg{un po' più di} un dominio di integrità. La richiesta aggiuntiva è che ogni \emph{ideale} dell'anello sia principale. Un'ideale si può descrivere come un sottoinsieme di $A$ chiuso rispetto alla somma e tale che il prodotto di un elemento qualsiasi dell'anello con un elemento qualsiasi dell'ideale sia, a sua volta, un elemento dell'ideale. Inoltre, affinché un ideale sia principale dev'essere possibile \virg{generarlo} tramite un solo elemento. Ad esempio, in $\Z$, tutti i multipli di un certo numero formano un ideale generato da quel numero e lo indicheremo con $n\Z$ (ricorda nulla?\footnote{Le classi di resto modulo $n$ si generano tramite una reazione di equivalenza data proprio dall'ideale $n\Z$.}). Per ovvi motivi, non andremo oltre. \textit{«Non ti crucciare: vuolsi così colà dove si puote ciò che si vuole, e più non dimandare.»}.
+			\end{comment}
+		\end{subsubsection}
+		\begin{subsubsection}{Campi}
+			Tuttavia, però, ci manca da introdurre la struttura algebrica più importante per il nostro obiettivo:
+			\begin{description}
+				\item[Campo:] una terna $(\K,+,\cdot)$ è un \emph{campo} sse $(\K,+,\cdot)$ è un anello commutativo ed ogni elemento di $\K$ diverso dallo zero ammette inverso moltiplicativo.
+			\end{description}
+			In genere si usano la lettera $\K$ o $\mathbb{F}$, rispettivamente dal tedesco e dall'inglese. Inoltre, quando le operazione sono ovvie dal contesto, indicheremo una struttura algebrica, specialmente se è un campo, solo tramite il suo insieme: diremo, ad esempio, \virg{il campo $\Q$} per indicare il campo dei numeri razionali con la solita somma e prodotto.
+			\begin{eg}
+				$\Q$, $\R$ e $\C$ sono, rispettivamente, il campo dei numeri razionali, quello dei numeri reali e quello dei numeri complessi.
+			\end{eg}
+			\begin{eg}
+				Le soluzioni dell'esercizio \ref{primi}, oltre ad essere domini di integrità, sono anche campi. Infatti $\Z/p\Z$ è un campo ogni volta che $p$ è un primo.
+			\end{eg}
+			\begin{eg}
+				Se $\K=\{a+b\sqrt2\tc a,b\in\Q\}=\Q[\sqrt{2}]$, allora $(\K,+,\cdot)$ è un campo.
+			\end{eg}
+			\begin{es}
+				Verifica che $\Q[\sqrt{2}]$ è un campo. Che ne pensi di $\Q[\sqrt{-1}]$?\footnote{$\Q[\sqrt{-1}]$ è noto come \virg{Campo dei Quozienti degli Interi di Gauss}.}
+			\end{es}
+			\begin{es}
+				Dimostra che $\Z/3\Z$ è un campo mentre $\Z/4\Z$ non lo è.
+			\end{es}
+		\end{subsubsection}
+	
+	
+	\section{Introduzione agli Omomorfismi}
+		
+		Quando abbiamo a disposizione due strutture diverse siamo interessati a sapere se sia possibile studiare le caratteristiche di una delle due a partire da quelle, magari più semplici, dell'altra.
+		Prima di tutto abbiamo bisogno di una funzione che leghi i due insiemi, poi, affinché questo \virg{legame} ci sia utile, vorremmo che la funzione considerata si comportasse bene anche nei confronti delle operazioni definite sulle strutture. In che senso?
+		\begin{description}
+			\item[Omomorfismo:] se $(A,+,\cdot)$ e $(B,\oplus,\odot)$ sono due anelli, un \emph{omomorfismo} (morfismo di anelli) è un’applicazione $f:A\to B$ che conserva le operazioni nel senso chiarito qui di seguito:
+			\begin{gather*}	
+				f(a_1+a_2)=f(a_1)\oplus f(a_2)=b_1\oplus b_2  \\
+				f(a_1\cdot a_2)=f(a_1)\odot f(a_2)=b_1\odot b_2 \\
+				f(1_A)=1_B
+			\end{gather*}
+			dove $b_i=f(a_i)$.
+		\end{description}
+		\begin{es}[*]
+			Secondo te, è essenziale la terza richiesta?\footnote{Considera l'insieme $\Z\times\Z$ con le operazioni seguenti: $(a,b)+(c,d)=(a+c,b+d)$ e $(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)$. (Quali sono lo zero e l'unità di questo anello?) Se prendiamo la funzione $f:\Z\to\Z\times\Z$ data da $f(z)=(z,0)$, si può mostrare facilmente che questa rispetta le prime due richieste ma l'immagine di $1$ è $(1,0)$ che non è l'unità di $\Z^2$. Quindi esistono funzioni che rispettano le prime due definizioni ma non la terza!}
+		\end{es}
+		\begin{es}
+			\Egrave sempre vero che $f(0_A)=0_B$?
+		\end{es}
+		La funzione $f$ sugli insiemi può essere di iniettiva, suriettiva o biiettiva e, di conseguenza, classifichiamo l'omomorfismo dato da $f$:
+		\begin{itemize}
+			\item si chiama \textbf{monomorfismo} un omomorfismo iniettivo;
+			\item si chiama \textbf{epimorfismo} un omomorfismo suriettivo;
+			\item si chiama \textbf{isomorfismo} un omomorfismo che ammette una funzione inversa che è anch'essa un morfismo\footnote{L'idea di isomorfismo è incredibilmente utile: con un isomorfismo si può passare avanti e indietro senza perdere alcuna informazione riguardo alla struttura aggiuntiva che abbiamo messo sugli insiemi. Ovvero, anche di fronte ad insiemi di partenza estremamente diversi tra loro, possiamo identificarli come se fossero la stessa struttura.};
+			\item quando $A=B$ abbiamo un \textbf{endomorfismo} che, nel caso sia un isomorfismo, si dirà \textbf{automorfismo}.
+		\end{itemize}
+		\begin{fatto}
+			Se un morfismo di anelli è un monomorfismo e un epimorfismo (quindi se è biiettivo) allora è un isomorfismo\footnote{Esistono dei contesti più complessi delle strutture algebriche qui introdotte in cui la nozione di morfismo richiede di preservare l'ulteriore struttura che si definisce sugli oggetti. A differenza del caso degli anelli, esistono delle strutture per cui omomorfismo biettivo non implica isomorfismo.}.
+		\end{fatto}
+		L'insieme di tutti i possibili morfismi da $A$ a $B$ si indica con $Hom(A,B)$.
+		
+		Infine, può essere utile introdurre già da ora la nozione di \emph{kernel} (o \emph{nucleo}) di un omomorfismo:
+		\begin{description}
+			\item[Kernel:] il nucleo di un morfismo, indicato con $\ker{(f)}$, è l'insieme di tutti quegli elementi $a$ di $A$ tali che la loro immagine tramite $f$ è lo $0_B$ di $B$, in simboli: 
+			\begin{equation*} 
+				\ker{(f)}\defeq\{a\in A\tc f(a)=0_B\}\defeq f^{-1}(0_B).
+			\end{equation*}
+		\end{description}
+		
+		Per ora ci limitiamo ad una trattazione astratta poiché inevitabilmente alcuni esempi significativi di omomorfismo si incontreranno in modo naturale strada facendo.
+		
+		
+		% Ed evidenzia che, sotto la nozione di isomorfismo, due strutture sono identiche anche se estremamente diverse tra loro (quello che dico dell'una vale anche per l'altra e viceversa)
+		
+		% tipi di morfismo cfr 3.10 e 4.8 algebra1, con esempi illuminanti di isomorfismo e idee su epimorfismo "proiezione", tipo proiettare i punti di uno spazio 3d sul piano (insomma degli esempi concreti)

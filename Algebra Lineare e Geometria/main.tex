@@ -1,0 +1,37 @@
+\documentclass[a4paper, oneside]{book}
+
+\title{Oh hi, thanks for checkin' in, \\ I still can't make Titles}
+\author{\Large{Scherzo, è \virg{Algebra Lineare e Geometria}}}
+\date{Prof. Strozzi}
+\setcounter{secnumdepth}{2}				% non numerare subsubsection
+
+
+\input{Cmd/cmd.tex}								
+
+\begin{document}
+	\frontmatter
+
+		\maketitle
+		\selectlanguage{italian}
+		
+		\input{Frontmatter/Dedica.tex}
+		\input{Frontmatter/Sommario.tex} % aggiungi che es(*)= esercizio difficile o di fantasia
+		\input{Frontmatter/Ringraziamenti.tex}
+			\newpage
+		\tableofcontents
+			\newpage
+	
+	\mainmatter
+	
+		\input{Mainmatter/Capitolo1}
+			\newpage
+		\input{Mainmatter/Capitolo2}
+		
+		\begin{comment}
+			\begin{appendices}
+				\include{Mainmatter/Appendice.tex}
+			\end{appendices}
+			direi che ci sta un'appendice sull'introduzione alla notazione per capire la tesi di Pano
+		\end{comment}
+	
+\end{document}

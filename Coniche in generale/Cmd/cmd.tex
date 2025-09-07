@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%% Pacchetti %%%%%%%%%%%%%%%%%%%%%						
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[italian.main, english]{babel}
+\usepackage{amsmath}
+\usepackage{scalerel}
+\usepackage{amssymb}
+\usepackage{MnSymbol}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[shortlabels]{enumitem}
+\usepackage[pdfauthor={Sebastian Strozzi},pdftitle={Algebra Lineare e Geometria}]{hyperref}
+%	\hypersetup{colorlinks,%
+%		citecolor=black,%
+%		filecolor=black,%
+%		linkcolor=black,%
+%		urlcolor=black}
+\newcommand\hmmax{0} % default 3
+\newcommand\bmmax{0} % default 4
+\usepackage{comment} 		            % Usa \begin{comment} \end{comment}
+\usepackage{braket} 					% Parentesi
+\usepackage{nicefrac}					% Frazioni carine
+\usepackage{titlesec}       			% Modifica il formato dei titoli
+\usepackage[capitalise]{cleveref} 		% Riferimenti
+\usepackage{emptypage} 					% Migliora pagine vuote
+%\usepackage{enumitem} 					% Liste
+\usepackage{fancyhdr} 					% Modifica stile di pagina
+
+%%%%%%%%%%%%%%%%%% Definizione Comandi %%%%%%%%%%%%%%%%%%%%%%
+
+% Rimuovi la parola 'Chapter' dai titoli
+%\titleformat{\chapter}
+%{\Huge \normalfont \bfseries}{\thechapter}{1em}{}
+
+
+% Stile di Pagina
+\begin{comment}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.1pt}
+	\renewcommand{\sectionmark}[1]{%
+		\markboth{\thesection.\ #1}{}}
+	\lhead{\bfseries \leftmark}
+	\chead{}
+	\rhead{\bfseries \rightmark}
+	\cfoot{\thepage}
+\end{comment}
+
+
+% Grafici e Tipografici
+\def\barra{\begin{center}	\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \end{center}}
+\def\Egrave{\MakeUppercase{è}\ }
+\def\apertevirg{‘‘}
+\def\chiusevirg{''}
+\newcommand{\virg}[1]{\apertevirg #1\chiusevirg}
+
+% Insiemi Numerici e Font utili
+\def\N{\ensuremath{\mathbb{N}}}
+\def\Z{\ensuremath{\mathbb{Z}}}
+\def\Q{\ensuremath{\mathbb{Q}}}
+\def\R{\ensuremath{\mathbb{R}}}
+\def\C{\ensuremath{\mathbb{C}}}
+\def\K{\ensuremath{\mathbb{K}}}
+\newcommand{\urna}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\success}[1]{\ensuremath{\underline{#1}}}
+
+
+% Parentesi
+\newcommand{\Graffa}[1]{\ensuremath{ \Big\{ #1 \Big\} }}
+\newcommand{\Quadra}[1]{\ensuremath{ \big[ #1 \big] }}
+
+% Simboli Logici e Insiemistici
+\def\defeq{\ensuremath{\stackrel{\text{def}}{=}}}				% uguale per def
+\def\nn{\ensuremath{\neg}}										% not
+\def\ee{\ensuremath{\land}}										% and
+\def\oo{\ensuremath{\lor}}										% or
+\def\allora{\ensuremath{\Rightarrow}}							% implicazione
+\def\sse{\ensuremath{\leftrightarrow}} 							% se e solo se
+\def\perogni{\ensuremath{\forall}}								% per ogni
+\def\esiste{\ensuremath{\exists}}								% esiste
+\def\tc{\ensuremath{\ \rvert\ }}								% tale che
+\newcommand{\compl}[1]{\ensuremath{\overline{#1}}}				% complementare
+\newcommand{\parti}[1]{\ensuremath{\mathscr{P}(#1)}}			% Parti di X
+\def\Universo{\ensuremath{\mathcal{U}}}							% Universo
+\def\Partizione{\ensuremath{\mathcal{P}}}						% Partizione
+\def\Corr{\ensuremath{\mathcal{C}}}								% Partizione
+\def\I{\ensuremath{\mathbb{I}}}									% insieme indice
+\def\parallela{\ensuremath{/\!/}}								% simbolo parallele
+\newcommand{\class}[1]{\ensuremath{[#1]_{\mathcal{R}}}}			% classe di eq di x
+
+
+% Simboli Vari
+\def\composto{\ensuremath{\circ}}
+\def\ts{\ensuremath{\oplus}}
+\def\tp{\ensuremath{\otimes}}
+
+
+% Stile dei Teoremi
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]						
+\newtheorem{prop}[teo]{Proposizione}
+\newtheorem{lemma}[teo]{Lemma}
+\newtheorem{corollary}{Corollario}[teo]
+\newtheorem{fatto}[teo]{Fatto}
+\theoremstyle{definition}
+\newtheorem{defin}[teo]{Definizione}
+\newtheorem{eg}{Esempio}[section]
+\newtheorem{es}{Esercizio}[section]

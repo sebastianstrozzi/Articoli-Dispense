@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%% Pacchetti %%%%%%%%%%%%%%%%%%%%%						
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[italian, english]{babel}
+\usepackage{amsmath}
+\usepackage{scalerel}
+\usepackage{amssymb}
+\usepackage{MnSymbol}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[shortlabels]{enumitem}
+
+
+%%%%%%%%%%%%%%%%%% Definizione Comandi %%%%%%%%%%%%%%%%%%%%%%
+
+% Grafici e Tipografici
+\def\barra{\begin{center}	\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \end{center}}
+\def\Egrave{\MakeUppercase{è}\ }
+\def\apertevirg{‘‘}
+\def\chiusevirg{''}
+\newcommand{\virg}[1]{\apertevirg #1\chiusevirg}
+
+% Insiemi Numerici
+\def\N{\ensuremath{\mathbb{N}}}
+\def\Z{\ensuremath{\mathbb{Z}}}
+\def\Q{\ensuremath{\mathbb{Q}}}
+\def\R{\ensuremath{\mathbb{R}}}
+\def\C{\ensuremath{\mathbb{C}}}
+\newcommand{\urna}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\success}[1]{\ensuremath{\underline{#1}}}
+\def\Universo{\ensuremath{\mathcal{U}}}
+\newcommand{\parti}[1]{\ensuremath{\mathscr{P}(#1)}}
+
+% Parentesi
+\newcommand{\Graffa}[1]{\ensuremath{ \Big\{ #1 \Big\} }}
+\newcommand{\Quadra}[1]{\ensuremath{ \big[ #1 \big] }}
+
+% Simboli Logici e Insiemistici
+\def\defeq{\ensuremath{\stackrel{\text{def}}{=}}}					% uguale per def
+\def\nn{\ensuremath{\neg}}											% not
+\def\ee{\ensuremath{\land}}											% and
+\def\oo{\ensuremath{\lor}}											% or
+\def\allora{\ensuremath{\rightarrow}}								% implicazione
+\def\sse{\ensuremath{\leftrightarrow}} 
+\def\perogni{\ensuremath{\forall}}									% per ogni
+\def\esiste{\ensuremath{\exists}}									% esiste
+\def\tc{\ensuremath{\rvert}\ }
+\newcommand{\complementare}[1]{\ensuremath{\overline{#1}}}
+
+% Simboli Vari
+\def\composto{\ensuremath{\circ}}
+
+\def\ts{\ensuremath{\oplus}}
+\def\tp{\ensuremath{\otimes}}
